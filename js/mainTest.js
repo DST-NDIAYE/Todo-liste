@@ -1,3 +1,4 @@
+'use strict' 
 
 // var div = document.querySelector(".element") ;
 
@@ -30,3 +31,110 @@
 // // meme chose avec prepend
 // div.insertBefore(a, div.firstChild);
 
+
+// var tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+// tab.forEach(element => {
+//     console.log(element + 1);
+// });
+
+
+// var buttons = document.getElementsByTagName('button');
+// for (const button of buttons) {
+
+//     button.addEventListener('click', (e) => {
+//         console.log(`${e.target.textContent} est cliquer `);
+//     });
+// }
+
+
+
+// var pers = [
+//     {
+//         nom: "a",
+//         preno: "dst"
+//     }, {
+//         nom: "b",
+//         preno: "dst"
+//     }, {
+//         nom: "c",
+//         preno: "dst"
+//     }, {
+//         nom: "c",
+//         preno: "dst"
+//     }, {
+//         nom: "d",
+//         preno: "dst"
+//     }, {
+//         nom: "d",
+//         preno: "dst"
+//     }
+
+// ] ;
+
+// var nom = pers.filter(personne => personne.nom === "d");
+
+// console.log(nom);
+
+
+
+
+// var tableau = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+// var [ a , ...rest] = tableau ;
+
+// console.log( rest);
+
+// var {nom ,pren} = pers[0] ;
+// console.log(nom , preno);
+
+
+////////////////////////////////
+
+
+// class personne{
+
+//     constructor( prenom , nom , age ){
+
+//         this.prenom = prenom ;
+//         this.nom = nom ;
+//         this.age = age ;  
+//     }
+    
+//     affiche(){
+//         console.log(dst.prenom , dst.nom , dst.age);
+//     }
+// }
+
+// class Admin extends personne{
+
+//     constructor( prenom , nom , age , status){
+
+//         super(prenom , nom , age ) ;
+//         this.status = status ;
+//     }
+
+//     affiche(){
+        
+//         return `${super.affiche()} ${this.nom} ${this.status} ` 
+//     }
+// }
+
+
+// var dst = new personne("Diamou" , "serigne" , 99) ;
+
+// var admin = new Admin("bassirou" , "ndiaye" , 99 , "etudiant") ;
+
+// // dst.affiche() ;
+
+// admin.affiche() ;
+
+var button = document.getElementsByTagName("button")[2] ;
+
+button.addEventListener("click",()=> clearInterval(mysetIntervale)) ;
+
+console.log("aaaaaaaaaaaaaaaaaaaaa");
+
+var mysetIntervale = setInterval(() => {
+    console.log("SetIntervalle()");
+}, 500);

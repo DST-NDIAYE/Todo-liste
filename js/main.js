@@ -29,10 +29,11 @@ function AjoueTache(mesTaches) {
     }
 }
 
-for (let i = 0; i < mesTaches.length; i++) {
+// for (let i = 0; i < mesTaches.length; i++) {
+//    AjoueTache(mesTaches[i]);
+// }
 
-   AjoueTache(mesTaches[i]);
-}
+mesTaches.forEach( tache => AjoueTache(tache) ) ;
 
 function nouveauTAches() {
     
@@ -56,3 +57,13 @@ input.addEventListener('keydown' , (e)=>{
             nouveauTAches() ;
         }
 })
+
+clear.addEventListener('click' , (e)=>{
+
+    list.innerHTML = " " ;
+});
+
+load.addEventListener('click' , (e)=>{
+
+    
+ }) ;

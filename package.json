@@ -1,0 +1,23 @@
+{
+  "name": "to-do-liste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DST-NDIAYE/Todo-liste.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DST-NDIAYE/Todo-liste/issues"
+  },
+  "homepage": "https://github.com/DST-NDIAYE/Todo-liste#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6"
+  }
+}
