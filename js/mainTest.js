@@ -1,4 +1,4 @@
-'use strict' 
+'use strict'
 
 // var div = document.querySelector(".element") ;
 
@@ -100,7 +100,7 @@
 //         this.nom = nom ;
 //         this.age = age ;  
 //     }
-    
+
 //     affiche(){
 //         console.log(dst.prenom , dst.nom , dst.age);
 //     }
@@ -115,7 +115,7 @@
 //     }
 
 //     affiche(){
-        
+
 //         return `${super.affiche()} ${this.nom} ${this.status} ` 
 //     }
 // }
@@ -129,12 +129,69 @@
 
 // admin.affiche() ;
 
-var button = document.getElementsByTagName("button")[2] ;
+// var button = document.getElementsByTagName("button")[2] ;
 
-button.addEventListener("click",()=> clearInterval(mysetIntervale)) ;
+// button.addEventListener("click",()=> clearInterval(mysetIntervale)) ;
 
-console.log("aaaaaaaaaaaaaaaaaaaaa");
+// console.log("aaaaaaaaaaaaaaaaaaaaa");
 
-var mysetIntervale = setInterval(() => {
-    console.log("SetIntervalle()");
-}, 500);
+// var mysetIntervale = setInterval(() => {
+//     console.log("SetIntervalle()");
+// }, 500);
+
+
+
+
+
+// fetch('http://127.0.0.1:5501/js/TO%20DO%20LISTE/js/data.json')
+//     .then(reponse => {
+//         if (reponse.ok) {
+//             return reponse.json()
+//         } else {
+//             throw new Error("Failed to connect to server");
+//         }
+//     })
+//     .then(tableau => {
+
+//         console.log(tableau);
+
+//         tableau.forEach(taches => {
+//             var h1 = document.createElement('h1');
+//             h1.textContent = taches;
+//             document.body.appendChild(h1);
+//         });
+
+//     })
+//     .catch(e => {
+//         console.error("un y a une erreur " + e);
+//     })
+
+
+
+
+    async function getTaches( ){
+
+        const reponseDuServer = await fetch('http://127.0.0.1:5501/js/TO%20DO%20LISTE/js/data.json') ;
+
+        if (reponseDuServer.ok) {
+            return reponseDuServer.json()
+        } 
+            throw new Error("Failed to connect to server");
+    }
+
+try {
+    
+    getTaches().then(tableauDesTache => {
+
+        console.log(tableauDesTache);
+
+        tableauDesTache.forEach(taches => {
+            var h1 = document.createElement('h1');
+            h1.textContent = taches;
+            document.body.appendChild(h1);
+        });
+
+    })
+} catch (error) {
+    console.error("un y a une erreur " +error);
+}

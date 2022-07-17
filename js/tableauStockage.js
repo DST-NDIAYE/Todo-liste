@@ -1,28 +1,37 @@
 class tableauStockage {
 
 
-    constructor(name){
+    constructor(name) {
         this.name = name;
-        this.list = this.get() ;
+        this.list = this.get();
     }
 
 
-    get(){
+    get() {
+
+        if (!localStorage.getItem(this.name)) {
+            localStorage.setItem(this.name, '[]')
+        }
+        return JSON.parse(localStorage.getItem(this.name));
+    }
+
+    set(value) {
+        this.list.push(value);
+        localStorage.setItem(this.name, JSON.stringify(this.list));
 
     }
 
-    set(){
-
-
+    remove(value) {
+        const index = this.list.indexOf(value);
+        this.list.splice(index, 1); // remove the last elementsv1
+        localStorage.setItem(this.name , JSON.stringify(this.list)) ;
     }
 
-    remove(value){
+    clear() {
 
+        localStorage.removeItem(this.list )
+ 
     }
-
-    clear(){ 
-        
-      }
 
 
 }
